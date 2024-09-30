@@ -36,7 +36,7 @@ const EmployeeManagement = () => {
   };
 
   const fetchCityTemperatures = async (employees) => {
-    const apiKey = "90f8bc083e39e2b11d1833cf2618224f"; // Replace with your OpenWeather API key
+    const apiKey = "YOUR_OPEN_WEATHER_API_KEY"; // Replace with your OpenWeather API key
     const cityNames = employees.map(emp => emp.city).filter(city => city);
     const promises = cityNames.map(city => 
       axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
